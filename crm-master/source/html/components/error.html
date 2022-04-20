@@ -1,0 +1,15 @@
+<div class="error@@if(context.class) { @@class}@@if(context.shown) { error--@@shown}">
+  @@include("source/html/components/button.html", {
+    "leftIcon": {
+      "width": 24,
+      "height": 24,
+      "name": "#icon-attention",
+      "class": "error__icon"
+    },
+    "class": "button--empty error__button"
+  })
+  <div class="error__message">
+    <h2 class="error__message-title">Сообщение об ошибке</h2>
+    <p class="error__message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan vestibulum est eget congue. Aliquam eget eros massa. Vivamus aliquet magna tortor, vel luctus odio tempor pellentesque.</p>
+  </div>
+</div>

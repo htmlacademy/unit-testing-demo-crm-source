@@ -1,0 +1,33 @@
+<div class="select@@if (context.class) { @@class}@@if (context.mod) { select--@@mod }">
+  <div class="select__header">
+    @@if (context.leftIcon&&!context.opened) {
+      <svg width="@@leftIcon.width" height="@@leftIcon.height" aria-hidden="true">
+        <use xlink:href="@@leftIcon.name"></use>
+      </svg>
+    }
+    @@if (context.leftIcon&&context.opened) {
+      <svg width="@@leftIconOpened.width" height="@@leftIconOpened.height" aria-hidden="true">
+        <use xlink:href="@@leftIconOpened.name"></use>
+      </svg>
+    }
+    @@if (context.caption) {
+      <span>@@caption@@if(context.captionNumber){: <span class="select-choice-number">@@captionNumber</span>}</span>
+    }
+    @@if (context.resetButton) {
+      <button type="button">
+        <svg width="@@resetButton.width" height="@@resetButton.height" aria-hidden="true">
+          <use xlink:href="@@resetButton.name"></use>
+        </svg>
+      </button>
+    }
+  </div>
+  <div class="select__list">
+    <ul>
+      <li>Черновик</li>
+      <li>Переговоры</li>
+      <li>Подписание</li>
+      <li>Постановка</li>
+      <li>Архив</li>
+    </ul>
+  </div>
+</div>

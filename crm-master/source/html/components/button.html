@@ -1,0 +1,15 @@
+<button  class="button@@if (context.class) { @@class}"@@if (context.type) { type="@@type"}>
+  @@if (context.leftIcon) {
+    <svg class="button__left-icon@@if (context.leftIcon.class) { @@leftIcon.class}"  width="@@leftIcon.width" height="@@leftIcon.height" aria-hidden="true">
+      <use xlink:href="@@leftIcon.name"></use>
+    </svg>
+  }
+  @@if (context.caption) {
+    <span>@@caption</span>
+  }
+  @@if (context.rightIcon) {
+    <svg class="button__right-icon@@if (context.rightIcon.class) { @@rightIcon.class}" width="@@rightIcon.width" height="@@rightIcon.height" aria-hidden="true">
+      <use xlink:href="@@rightIcon.name"></use>
+    </svg>
+  }
+</button>

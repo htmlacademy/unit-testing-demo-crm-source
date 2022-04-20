@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>Компоненты</title>
+
+  <style>
+    main > .container {
+      padding: 60px;
+    }
+
+    .components-backwards {
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-left: 7px;
+    }
+
+    .components-backwards span:first-child {
+      position: relative;
+      top: -3px;
+
+      display: inline-block;
+      margin-right: 15px;
+
+      font-size: 16px;
+      line-height: 24px;
+      vertical-align: top;
+
+      transform: scale(2);
+    }
+
+    .components-backwards span:last-child {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .components-backwards + h1 {
+      margin-bottom: 0;
+    }
+
+    .container > section {
+      padding: 20px 0;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <div class="wrapper">
+
+    <main>
+      <div class="container">
+        <div class="inner-container">
+          <a class="components-backwards" href="index.html">
+            <span>&larr;</span>
+            <span>вернуться на разводящую</span>
+          </a>
+          <h1>Компоненты, используемые в вёрстке</h1>
+
+          <section>
+            <h2>Кнопка</h2>
+
+            <p>.button \ .button--filled, .button--transparent, .button--lighter, .button--large-icon</p>
+            <div style="margin-bottom: 30px;"> .button--filled
+              @@include("source/html/components/button.html", {
+                "leftIcon": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-arrow-in-circle"
+                },
+                "caption": "Изменить состояние",
+                "rightIcon": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-arrow-in-circle"
+                },
+                "type": "button",
+                "class": "button--filled"
+              })
+            </div>
+            <div style="margin-bottom: 30px;"> .button--transparent
+              @@include("source/html/components/button.html", {
+                "leftIcon": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-arrow-in-circle"
+                },
+                "caption": "Изменить состояние",
+                "rightIcon": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-arrow-in-circle"
+                },
+                "type": "button",
+                "class": "button--transparent"
+              })
+            </div>
+            <div style="margin-bottom: 30px;">
+
+              .button--lighter .button--large-icon
+                @@include("source/html/components/button.html", {
+                  "leftIcon": {
+                    "width": 24,
+                    "height": 24,
+                    "name": "#icon-roll-back",
+                  },
+                  "type": "button",
+                  "class": "button--lighter button--large-icon"
+                })
+            </div>
+            <div style="margin-bottom: 30px;">
+              .button--empty .button--accent-text
+              @@include("source/html/components/button.html", {
+                "type": "button",
+                "caption": "Показать больше (+20)",
+                "class": "button--empty button--accent-text"
+              })
+            </div>
+          </section>
+          <section style="margin-bottom: 200px;">
+            <h2>Селект</h2>
+
+            <p>.select \ .select--opened .select--inline .select--selected</p>
+            <p style="color: red;">Неоживленный селект, сверстанный на дивах</p>
+            <div style="margin-bottom: 30px;"> .select
+              @@include("source/html/components/select.html", {
+                "leftIcon": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-arrow-down"
+                },
+                "caption": "Состояние",
+                "resetButton": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-cross"
+                },
+                "class": "select--inline"
+              })
+              .select .select--selected:
+              @@include("source/html/components/select.html", {
+                "leftIcon": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-arrow-down"
+                },
+                "caption": "Состояние",
+                "resetButton": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-cross"
+                },
+                "class": "select--inline",
+                "mod": "selected",
+                "leftIconOpened": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-arrow-up"
+                },
+              })
+              .select .select--opened:
+              @@include("source/html/components/select.html", {
+                "leftIcon": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-arrow-down"
+                },
+                "caption": "Состояние",
+                "resetButton": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-cross"
+                },
+                "class": "select--inline",
+                "mod": "opened",
+                "leftIconOpened": {
+                  "width": 20,
+                  "height": 20,
+                  "name": "#icon-arrow-up"
+                },
+              })
+            </div>
+          </section>
+
+          <section>
+            <h2>Чекбокс</h2>
+            <p>.checkbox / .checkbox input:checked, .checkbox input:disabled</p>
+            <div style="margin: 30px 0;">
+              .checkbox
+              @@include("source/html/components/checkbox.html", {
+                "name": "checkbox-1",
+                "id": "checkbox-1"
+              })
+            </div>
+            <div style="margin: 30px 0;">
+              .checkbox input:checked
+              @@include("source/html/components/checkbox.html", {
+                "name": "checkbox-2",
+                "id": "checkbox-2",
+                "checked": "checked"
+              })
+            </div>
+            <div style="margin: 30px 0;">
+              .checkbox input:disabled
+              @@include("source/html/components/checkbox.html", {
+                "name": "checkbox-3",
+                "id": "checkbox-3",
+                "disabled": "disabled"
+              })
+            </div>
+
+          </section>
+          <section>
+            <h2>Сообщение об ошибке</h2>
+            <p >.error / .error--shown</p>
+            <div style="display: inline-block; margin-left: 100px;">
+              .error .error--shown
+              @@include("source/html/components/error.html", {
+                "shown": "shown"
+              })
+            </div>
+          </section>
+        </div>
+
+
+          <!-- </div> -->
+        <!-- Всегда оставляйте коммент ниже, чтобы удобно было копипастить -->
+        <!-- <section>
+          <h2></h2>
+
+          <p></p>
+        </section> -->
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+// Vendor
+//---------------------------------
+
+@import "vendor/normalize";
+
+// Global
+//---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+
+//Components
+
+@import "components/nav-link";
+@import "components/main-nav";
+@import "components/page-title";
+@import "components/filter-form";
+@import "components/select";
+@import "components/button";
+@import "components/checkbox";
+@import "components/error";
+@import "components/input-date";
+@import "components/go-back-link";
+
+
+// Blocks
+//---------------------------------
+
+@import "blocks/main-content";
+@import "blocks/table";
+
+
+// используйте это для отключения ховеров на тач устройствах
+// ! но не используйте это для текстовых полей ( input, textarea )
+// также для любых transition обязательно указывайте transition-property
+// transition: color $default-transition-settings, а не transition: $default-transition-settings
+
+/* @media (hover: hover), screen and (min-width: 0\0) {
+  &:hover,
+  &:focus {
+    color: red;
+  }
+} */

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+
+    @@include("source/html/base/head.html")
+    <title>CRM — История проекта № 4</title>
+
+  </head>
+  <body>
+    <div style="display: none;">
+      @@include("build/img/sprite_auto.svg")
+    </div>
+    <main>
+      <div class="container">
+        @@include("source/html/components/main-nav.html")
+        <div class="main-content">
+          @@include("source/html/components/go-back-link.html", {
+            "href": "projects.html",
+            "caption": "Проекты",
+            "class": "main-content__go-back-link"
+          })
+          @@include("source/html/components/page-title.html", {
+            "title": "История проекта № 4",
+            "class": "main-content__page-title"
+          })
+          <div class="filter-form filter-form--project-history main-content__filter-form main-content__filter-form--project-history">
+            <form action="#" method="get">
+              @@include("source/html/components/input-date.html", {
+                "name": "date-input-from",
+                "id": "date-input-from",
+                "label": "Дата, от",
+                "class": "filter-form__input-date"
+              })
+              @@include("source/html/components/input-date.html", {
+                "name": "date-input-to",
+                "id": "date-input-to",
+                "label": "Дата, по",
+                "class": "filter-form__input-date"
+              })
+            </form>
+          </div>
+          <div class="table table--project-history">
+            <table>
+              <colgroup>
+                <col class="table__col-date">
+                <col class="table__col-performer">
+                <col class="table__col-medium">
+                <col class="table__col-medium">
+                <col class="table__col-medium">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col"> Дата и время</th>
+                  <th scope="col">Исполнитель</th>
+                  <th scope="col">Начальное состояние</th>
+                  <th scope="col">Название маршрута</th>
+                  <th scope="col">Целевое состояние</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><time datetime="2021-11-11 16:00">11.11.2021, 16:00</time></td>
+                  <td>Анастасия Коновалова</td>
+                  <td>Подготовка КП</td>
+                  <td>Whats'app</td>
+                  <td class="table__cell-attention">
+                    <div class="table__state-cell-inner">
+                      @@include("source/html/components/error.html", {
+                        "shown": "shown"
+                      })
+                      <span>Ожидаем реакцию клиента</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><time datetime="2021-11-11 16:00">11.11.2021, 16:00</time></td>
+                  <td>Анастасия Коновалова</td>
+                  <td>Подготовка КП</td>
+                  <td>Whats'app</td>
+                  <td>
+                    <div>
+                      @@include("source/html/components/error.html")
+                      <span>Ожидаем реакцию клиента</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><time datetime="2021-11-11 16:00">11.11.2021, 16:00</time></td>
+                  <td>Анастасия Коновалова</td>
+                  <td>Подготовка КП</td>
+                  <td>Whats'app</td>
+                  <td class="table__cell-attention">
+                    <div class="table__state-cell-inner">
+                      @@include("source/html/components/error.html", {
+                        "shown": "shown"
+                      })
+                      <span>Ожидаем реакцию клиента</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><time datetime="2021-11-11 16:00">11.11.2021, 16:00</time></td>
+                  <td>Анастасия Коновалова</td>
+                  <td>Подготовка КП</td>
+                  <td>Whats'app</td>
+                  <td>
+                    <div class="table__state-cell-inner">
+                      @@include("source/html/components/error.html")
+                      <span>Ожидаем реакцию клиента</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><time datetime="2021-11-11 16:00">11.11.2021, 16:00</time></td>
+                  <td>Анастасия Коновалова</td>
+                  <td>Подготовка КП</td>
+                  <td>Whats'app</td>
+                  <td>
+                    <div class="table__state-cell-inner">
+                      @@include("source/html/components/error.html")
+                      <span>Ожидаем реакцию клиента</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><time datetime="2021-11-11 16:00">11.11.2021, 16:00</time></td>
+                  <td>Анастасия Коновалова</td>
+                  <td>Подготовка КП</td>
+                  <td>Whats'app</td>
+                  <td>
+                    <div class="table__state-cell-inner">
+                      @@include("source/html/components/error.html")
+                      <span>Ожидаем реакцию клиента</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><time datetime="2021-11-11 16:00">11.11.2021, 16:00</time></td>
+                  <td>Анастасия Коновалова</td>
+                  <td>Подготовка КП</td>
+                  <td>Whats'app</td>
+                  <td>
+                    <div class="table__state-cell-inner">
+                      @@include("source/html/components/error.html")
+                      <span>Ожидаем реакцию клиента</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><time datetime="2021-11-11 16:00">11.11.2021, 16:00</time></td>
+                  <td>Анастасия Коновалова</td>
+                  <td>Подготовка КП</td>
+                  <td>Whats'app</td>
+                  <td>
+                    <div class="table__state-cell-inner">
+                      @@include("source/html/components/error.html")
+                      <span>Ожидаем реакцию клиента</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><time datetime="2021-11-11 16:00">11.11.2021, 16:00</time></td>
+                  <td>Анастасия Коновалова</td>
+                  <td>Подготовка КП</td>
+                  <td>Whats'app</td>
+                  <td>
+                    <div class="table__state-cell-inner">
+                      @@include("source/html/components/error.html")
+                      <span>Ожидаем реакцию клиента</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><time datetime="2021-11-11 16:00">11.11.2021, 16:00</time></td>
+                  <td>Анастасия Коновалова</td>
+                  <td>Подготовка КП</td>
+                  <td>Whats'app</td>
+                  <td>
+                    <div class="table__state-cell-inner">
+                      @@include("source/html/components/error.html")
+                      <span>Ожидаем реакцию клиента</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

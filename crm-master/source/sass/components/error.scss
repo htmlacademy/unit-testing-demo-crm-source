@@ -1,0 +1,56 @@
+.error {
+  display: none;
+  position: relative;
+}
+
+.error--shown {
+  display: block;
+}
+
+.error__button {
+  margin-right: 12px;
+  color: $color-pink-swan;
+  cursor: pointer;
+  transition: all $default-transition-settings;
+
+  &:hover {
+    color: $color-crusta;
+  }
+}
+
+.error__message {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: -15px;
+  left: 50%;
+  width: 277px;
+  transform: translate(-50%, -100%);
+  padding: 6px 8px;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: $color-default-white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all $default-transition-settings;
+}
+
+.error__button:hover + .error__message,
+.error__button:focus + .error__message {
+  display: block;
+}
+
+.error__button:hover,
+.error__button:focus {
+  color: $color-crusta;
+}
+
+.error__message-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0 0 6px;
+}
+
+.error__message-text {
+  margin: 0;
+}

@@ -1,0 +1,71 @@
+<div class="main-nav@@if (context.collapsed) { main-nav--@@collapsed}">
+  @@include("source/html/components/button.html", {
+    "leftIcon": {
+      "width": 30,
+      "height": 30,
+      "name": "#icon-collapse-nav",
+      "class": "main-nav__button-collapse"
+    },
+    "rightIcon": {
+      "width": 30,
+      "height": 30,
+      "name": "#icon-open-nav",
+      "class": "main-nav__button-open"
+    },
+    "type": "button",
+    "class": "main-nav__button button--empty"
+  })
+
+  <figure class="main-nav__figure">
+    <div class="main-nav__user-picture">
+      <img width="120" height="120" src="img/content/user-pic.webp" alt="Фотография пользователя Анастасии Коноваловой." srcset="img/content/user-pic@2x.webp 2x">
+    </div>
+    <figcaption>
+      <p class="main-nav__user-name">Анастасия Коновалова</p>
+      <p class="main-nav__user-role">Менеджер по продажам</p>
+    </figcaption>
+  </figure>
+
+  <nav class="main-nav__nav">
+    <ul class="main-nav__list">
+      <li class="main-nav__list-item">
+        @@include("source/html/components/nav-link.html", {
+          "active": "active",
+          "linkAddress": "#",
+          "title": "Проекты",
+          "iconName": "#icon-projects"
+        })
+      </li>
+
+      <li class="main-nav__list-item">
+        @@include("source/html/components/nav-link.html", {
+          "title": "Контрагенты",
+          "linkAddress": "#",
+          "iconName": "#icon-counteragents"
+
+        })
+      </li>
+      <li class="main-nav__list-item main-nav__list-item--underlined">
+        @@include("source/html/components/nav-link.html", {
+          "title": "Сообщения",
+          "linkAddress": "#",
+          "iconName": "#icon-messages"
+        })
+      </li>
+      <li class="main-nav__list-item">
+        @@include("source/html/components/nav-link.html", {
+          "title": "Настройки",
+          "linkAddress": "#",
+          "iconName": "#icon-settings",
+        })
+      </li>
+      <li class="main-nav__list-item">
+        @@include("source/html/components/nav-link.html", {
+          "title": "Выход",
+          "linkAddress": "#",
+          "iconName": "#icon-sign-out",
+        })
+      </li>
+    </ul>
+  </nav>
+</div>

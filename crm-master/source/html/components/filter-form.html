@@ -1,0 +1,88 @@
+<div class="filter-form@@if (context.class) { @@class }">
+  <form action="#" method="get">
+    <div class="filter-form__selects-wrapper">
+      @@include("source/html/components/select.html", {
+        "leftIcon": {
+          "width": 20,
+          "height": 20,
+          "name": "#icon-arrow-down"
+        },
+        "caption": "Состояние",
+        "resetButton": {
+          "width": 20,
+          "height": 20,
+          "name": "#icon-cross"
+        }
+      })
+      @@include("source/html/components/select.html", {
+        "leftIcon": {
+          "width": 20,
+          "height": 20,
+          "name": "#icon-arrow-down"
+        },
+        "caption": "Менеджер",
+        "resetButton": {
+          "width": 20,
+          "height": 20,
+          "name": "#icon-cross"
+        }
+      })
+      @@include("source/html/components/select.html", {
+        "leftIcon": {
+          "width": 20,
+          "height": 20,
+          "name": "#icon-arrow-down"
+        },
+        "caption": "Контрагент",
+        "resetButton": {
+          "width": 20,
+          "height": 20,
+          "name": "#icon-cross"
+        }
+      })
+    </div>
+    <div class="filter-form__buttons-wrapper">
+      @@include("source/html/components/button.html", {
+        "leftIcon": {
+          "width": 24,
+          "height": 24,
+          "name": "#icon-look-through",
+        },
+        "type": "button",
+        "class": "button--lighter button--large-icon"
+      })
+
+      @@include("source/html/components/button.html", {
+        "leftIcon": {
+          "width": 24,
+          "height": 24,
+          "name": "#icon-roll-back",
+        },
+        "type": "button",
+        "class": "button--lighter button--large-icon"
+      })
+
+      @@include("source/html/components/button.html", {
+        "caption": "Вернуть",
+        "leftIcon": {
+          "width": 20,
+          "height": 20,
+          "name": "#icon-reset"
+        },
+        "type": "reset",
+        "class": "button--transparent"
+      })
+
+      @@include("source/html/components/button.html", {
+        "caption": "Изменить состояние",
+        "rightIcon": {
+          "width": 20,
+          "height": 20,
+          "name": "#icon-arrow-in-circle"
+        },
+        "type": "submit",
+        "class": "button--filled"
+      })
+    </div>
+  </form>
+</div>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+
+    @@include("source/html/base/head.html")
+    <title>CRM — Проекты - все состояния</title>
+
+  </head>
+  <body>
+    <div style="display: none;">
+      @@include("build/img/sprite_auto.svg")
+    </div>
+    <main>
+      <div class="container">
+        @@include("source/html/components/main-nav.html", {
+          "collapsed": "collapsed"
+        })
+        <div class="main-content">
+          @@include("source/html/components/page-title.html", {
+            "title": "Проекты",
+            "class": "main-content__page-title"
+          })
+          <div class="filter-form main-content__filter-form">
+            <form action="#" method="get">
+              <div class="filter-form__selects-wrapper">
+                @@include("source/html/components/select.html", {
+                  "leftIcon": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-arrow-up"
+                  },
+                  "caption": "Состояние",
+                  "resetButton": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-cross"
+                  },
+                  "class": "select--opened filter-form__select"
+                })
+                @@include("source/html/components/select.html", {
+                  "leftIcon": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-arrow-down"
+                  },
+                  "caption": "Менеджер",
+                  "resetButton": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-cross"
+                  },
+                  "class": "filter-form__select"
+                })
+                @@include("source/html/components/select.html", {
+                  "leftIcon": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-arrow-down"
+                  },
+                  "caption": "Анатолий Маслов",
+                  "resetButton": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-cross"
+                  },
+                  "class": "select--selected filter-form__select"
+                })
+              </div>
+              <div class="filter-form__buttons-wrapper">
+                @@include("source/html/components/button.html", {
+                  "leftIcon": {
+                    "width": 24,
+                    "height": 24,
+                    "name": "#icon-look-through",
+                  },
+                  "type": "button",
+                  "class": "button--lighter button--large-icon filter-form__button"
+                })
+
+                @@include("source/html/components/button.html", {
+                  "leftIcon": {
+                    "width": 24,
+                    "height": 24,
+                    "name": "#icon-roll-back",
+                  },
+                  "type": "button",
+                  "class": "button--lighter button--large-icon filter-form__button"
+                })
+
+                @@include("source/html/components/button.html", {
+                  "caption": "Вернуть",
+                  "leftIcon": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-reset"
+                  },
+                  "type": "reset",
+                  "class": "button--transparent filter-form__button"
+                })
+
+                @@include("source/html/components/button.html", {
+                  "caption": "Изменить состояние",
+                  "rightIcon": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-arrow-in-circle"
+                  },
+                  "type": "submit",
+                  "class": "button--filled filter-form__button"
+                })
+              </div>
+            </form>
+          </div>
+          <div class="table">
+            <table>
+              <colgroup>
+                <col class="table__col-checkbox">
+                <col class="table__col-number">
+                <col class="table__col-large">
+                <col class="table__col-large">
+                <col class="table__col-large">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">№</th>
+                  <th scope="col">Состояние</th>
+                  <th scope="col">Контрагент</th>
+                  <th scope="col">Менеджер</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-1",
+                      "id": "checkbox-1"
+                    })
+                  </td>
+                  <td>1</td>
+                  <td>Черновик</td>
+                  <td>Анатолий Маслов</td>
+                  <td>Анастасия Коновалова</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-2",
+                      "id": "checkbox-2"
+                    })
+                  </td>
+                  <td>2</td>
+                  <td>Переговоры</td>
+                  <td>Антон Петров</td>
+                  <td>Мария Анатольева</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-3",
+                      "id": "checkbox-3"
+                    })
+                  </td>
+                  <td>3</td>
+                  <td>Подписание</td>
+                  <td>Анастасия Кулик</td>
+                  <td>Иван Ардашев</td>
+                </tr>
+                <tr class="table__row-checked">
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-4",
+                      "id": "checkbox-4",
+                      "checked": "checked"
+                    })
+                  </td>
+                  <td>4</td>
+                  <td>Постановка</td>
+                  <td>Юрий Николаев</td>
+                  <td>Владимир Вахрушев</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-5",
+                      "id": "checkbox-5"
+                    })
+                  </td>
+                  <td>5</td>
+                  <td>Архив</td>
+                  <td>Максим Степанов</td>
+                  <td>Анастасия Коновалова</td>
+                </tr>
+                <tr class="table__row-checked">
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-6",
+                      "id": "checkbox-6",
+                      "checked": "checked"
+                    })
+                  </td>
+                  <td>6</td>
+                  <td>Постановка</td>
+                  <td>Антон Петров</td>
+                  <td>Мария Анатольева</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-7",
+                      "id": "checkbox-7"
+                    })
+                  </td>
+                  <td>7</td>
+                  <td>Постановка</td>
+                  <td>Анатолий Маслов</td>
+                  <td>Анастасия Коновалова</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-8",
+                      "id": "checkbox-8",
+                      "disabled": "disabled"
+                    })
+                  </td>
+                  <td>8</td>
+                  <td>Архив</td>
+                  <td>Анатолий Маслов</td>
+                  <td>Анастасия Коновалова</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-9",
+                      "id": "checkbox-9",
+                      "disabled": "disabled"
+                    })
+                  </td>
+                  <td>9</td>
+                  <td>Черновик</td>
+                  <td>Антон Петров</td>
+                  <td>Анастасия Коновалова</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-10",
+                      "id": "checkbox-10",
+                      "disabled": "disabled"
+                    })
+                  </td>
+                  <td>10</td>
+                  <td>Постановка</td>
+                  <td>Максим Степанов</td>
+                  <td>Иван Ардашев</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-11",
+                      "id": "checkbox-11",
+                      "disabled": "disabled"
+                    })
+                  </td>
+                  <td>11</td>
+                  <td>Черновик</td>
+                  <td>Анатолий Маслов</td>
+                  <td>Анастасия Коновалова</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-12",
+                      "id": "checkbox-12"
+                    })
+                  </td>
+                  <td>12</td>
+                  <td>Архив</td>
+                  <td>Анатолий Маслов</td>
+                  <td>Владимир Вахрушев</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-13",
+                      "id": "checkbox-13"
+                    })
+                  </td>
+                  <td>13</td>
+                  <td>Черновик</td>
+                  <td>Антон Петров</td>
+                  <td>Мария Анатольева</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-14",
+                      "id": "checkbox-14"
+                    })
+                  </td>
+                  <td>14</td>
+                  <td>Постановка</td>
+                  <td>Анастасия Кулик</td>
+                  <td>Иван Ардашев</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-15",
+                      "id": "checkbox-15"
+                    })
+                  </td>
+                  <td>15</td>
+                  <td>Черновик</td>
+                  <td>Анатолий Маслов</td>
+                  <td>Анастасия Коновалова</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-16",
+                      "id": "checkbox-16"
+                    })
+                  </td>
+                  <td>16</td>
+                  <td>Архив</td>
+                  <td>Максим Степанов</td>
+                  <td>Мария Анатольева</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-17",
+                      "id": "checkbox-17"
+                    })
+                  </td>
+                  <td>17</td>
+                  <td>Черновик</td>
+                  <td>Антон Петров</td>
+                  <td>Владимир Вахрушев</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-18",
+                      "id": "checkbox-18"
+                    })
+                  </td>
+                  <td>18</td>
+                  <td>Архив</td>
+                  <td>Юрий Николаев</td>
+                  <td>Анастасия Коновалова</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-19",
+                      "id": "checkbox-19"
+                    })
+                  </td>
+                  <td>19</td>
+                  <td>Постановка</td>
+                  <td>Анастасия Кулик</td>
+                  <td>Иван Ардашев</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-20",
+                      "id": "checkbox-20"
+                    })
+                  </td>
+                  <td>20</td>
+                  <td>Черновик</td>
+                  <td>Анатолий Маслов</td>
+                  <td>Мария Анатольева</td>
+                </tr>
+              </tbody>
+            </table>
+            @@include("source/html/components/button.html", {
+              "type": "button",
+              "caption": "Показать больше (+20)",
+              "class": "button--empty button--accent-text table__show-more"
+            })
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

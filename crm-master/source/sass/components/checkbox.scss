@@ -1,0 +1,62 @@
+.checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox input {
+  @include visually-hidden();
+}
+
+.checkbox label {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checkbox label::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  background-color: $color-default-white;
+  border: 2px solid $color-pink-swan;
+  transition: all $default-transition-settings;
+}
+
+.checkbox label::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  background-image: url("../img/svg/icon-checkbox-active.svg");
+  transition: all $default-transition-settings;
+  opacity: 0;
+}
+
+.checkbox input:focus + label {
+  outline: 1px solid $color-default-black;
+}
+
+.checkbox input:disabled + label {
+  cursor: not-allowed;
+}
+
+.checkbox input:disabled + label::before {
+  border-color: $color-white-smoke-2;
+  pointer-events: none;
+  cursor: default;
+}
+
+.checkbox input:checked + label::before {
+  opacity: 0;
+}
+
+.checkbox input:checked + label::after {
+  opacity: 1;
+}

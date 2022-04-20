@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>Список страниц</title>
+
+  <style>
+    .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    a {
+      color: rgb(10, 10, 175);
+    }
+
+    li {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 7px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      ol {
+        padding-left: 20px;
+      }
+
+      ol li {
+        margin-bottom: 15px;
+      }
+
+      .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <main>
+    <div class="container">
+      <div class="inner-container">
+        <h1>Список страниц и компонентов</h1>
+        <ol>
+          <li>
+            <a href="components.html">UI Kit — components.html</a>
+          </li>
+          <li>
+            <a href="projects.html">Проекты — projects.html</a>
+          </li>
+          <li>
+            <a href="projects-all-states.html">Проекты - все состояния — projects-all-states.html</a>
+          </li>
+          <li>
+            <a href="projects-active-filters.html">Проекты - активные фильтры — projects-active-filters.html</a>
+          </li>
+          <li>
+            <a href="project-history.html">История проекта — project-history.html</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+
+    @@include("source/html/base/head.html")
+    <title>CRM — Проекты - активные фильтры</title>
+
+  </head>
+  <body>
+    <div style="display: none;">
+      @@include("build/img/sprite_auto.svg")
+    </div>
+    <main>
+      <div class="container">
+        @@include("source/html/components/main-nav.html")
+        <div class="main-content">
+          @@include("source/html/components/page-title.html", {
+            "title": "Проекты",
+            "class": "main-content__page-title"
+          })
+          <div class="filter-form main-content__filter-form">
+            <form action="#" method="get">
+              <div class="filter-form__selects-wrapper">
+                @@include("source/html/components/select.html", {
+                  "leftIcon": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-arrow-down"
+                  },
+                  "caption": "Постановка",
+                  "resetButton": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-cross"
+                  },
+                  "class": "select--selected filter-form__select"
+                })
+                @@include("source/html/components/select.html", {
+                  "leftIcon": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-arrow-down"
+                  },
+                  "caption": "Менеджер",
+                  "captionNumber": 2,
+                  "resetButton": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-cross"
+                  },
+                  "class": "select--selected filter-form__select"
+                })
+                @@include("source/html/components/select.html", {
+                  "leftIcon": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-arrow-down"
+                  },
+                  "caption": "Контрагент",
+                  "resetButton": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-cross",
+                  },
+                  "class": "filter-form__select"
+                })
+              </div>
+              <div class="filter-form__buttons-wrapper">
+                @@include("source/html/components/button.html", {
+                  "leftIcon": {
+                    "width": 24,
+                    "height": 24,
+                    "name": "#icon-look-through",
+                  },
+                  "type": "button",
+                  "class": "button--lighter button--large-icon filter-form__button"
+                })
+
+                @@include("source/html/components/button.html", {
+                  "leftIcon": {
+                    "width": 24,
+                    "height": 24,
+                    "name": "#icon-roll-back",
+                  },
+                  "type": "button",
+                  "class": "button--lighter button--large-icon filter-form__button"
+                })
+
+                @@include("source/html/components/button.html", {
+                  "caption": "Вернуть",
+                  "leftIcon": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-reset"
+                  },
+                  "type": "reset",
+                  "class": "button--transparent filter-form__button"
+                })
+
+                @@include("source/html/components/button.html", {
+                  "caption": "Изменить состояние",
+                  "rightIcon": {
+                    "width": 20,
+                    "height": 20,
+                    "name": "#icon-arrow-in-circle"
+                  },
+                  "type": "submit",
+                  "class": "button--filled filter-form__button"
+                })
+              </div>
+            </form>
+          </div>
+          <div class="table">
+            <table>
+              <colgroup>
+                <col class="table__col-checkbox">
+                <col class="table__col-number">
+                <col class="table__col-large">
+                <col class="table__col-large">
+                <col class="table__col-large">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">№</th>
+                  <th scope="col">Состояние</th>
+                  <th scope="col">Контрагент</th>
+                  <th scope="col">Менеджер</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-6",
+                      "id": "checkbox-6"
+                    })
+                  </td>
+                  <td>6</td>
+                  <td>Постановка</td>
+                  <td>Антон Петров</td>
+                  <td>Мария Анатольева</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-14",
+                      "id": "checkbox-14"
+                    })
+                  </td>
+                  <td>14</td>
+                  <td>Постановка</td>
+                  <td>Анастасия Кулик</td>
+                  <td>Иван Ардашев</td>
+                </tr>
+                <tr>
+                  <td>
+                    @@include("source/html/components/checkbox.html", {
+                      "name": "checkbox-19",
+                      "id": "checkbox-19"
+                    })
+                  </td>
+                  <td>19</td>
+                  <td>Постановка</td>
+                  <td>Анастасия Кулик</td>
+                  <td>Иван Ардашев</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
