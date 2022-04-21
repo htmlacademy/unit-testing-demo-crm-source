@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { App } from './app';
 import reportWebVitals from './reportWebVitals';
 import './sass/style.scss';
 
@@ -8,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <div>{'clean start'}</div>
+    <App />
   </React.StrictMode>
 );
 
