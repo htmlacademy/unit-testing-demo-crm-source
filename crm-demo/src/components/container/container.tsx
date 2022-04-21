@@ -1,9 +1,9 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
 
-export const Container = (p:PropsWithChildren<{}>)=>{
+export function Container(p:PropsWithChildren<Record<string, never>>) {
   return (
     <div className="container">
       {p.children}
     </div>
-  )
+  );
 }

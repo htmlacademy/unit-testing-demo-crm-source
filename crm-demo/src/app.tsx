@@ -1,7 +1,7 @@
-import { Container } from "./components/container/container"
+import { Container } from './components/container/container';
 
-export const App=()=>{
+export function App() {
   return (
     <Container />
-  )
+  );
 }
