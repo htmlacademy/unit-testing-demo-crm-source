@@ -25,9 +25,20 @@
   },
   "eslintConfig": {
     "extends": [
+      "htmlacademy/react-typescript",
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "env": {
+      "es2017": true,
+      "browser": true
+    },
+    "rules": {
+    }
   },
   "browserslist": {
     "production": [
@@ -40,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-htmlacademy": "^5.1.2"
   }
 }
