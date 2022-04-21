@@ -1,0 +1,17 @@
+.go-back-link {
+  display: inline-flex;
+  min-width: 550px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  transition: all $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $color-crusta;
+  }
+}
+
+.go-back-link__icon {
+  margin-right: 15px;
+}

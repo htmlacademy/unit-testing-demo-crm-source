@@ -1,0 +1,46 @@
+// Colors
+//---------------------------------
+// https://www.htmlcsscolor.com/hex/334482
+
+// Default
+
+$color-default-black:             #000000;
+$color-default-white:             #ffffff;
+$color-transparent:               rgba(255, 255, 255, 0);
+
+// Base
+
+$color-white-smoke:               #f8f7f7;
+$color-white-smoke-2:             #f2f2f2;
+$color-white-smoke-3:             #f0f0f0;
+$color-grey:                      #808080;
+$color-pink-swan:                 #b3b3b3;
+$color-very-light-grey:           #cccccc;
+$color-nobel:                     #999999;
+$color-crusta:                    #f0884e;
+$color-rose-white:                #fdede4;
+
+// Gradient
+
+$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Typography
+//---------------------------------
+
+$font-family--golos-text:         "Golos Text", "Arial", sans-serif;
+
+// Animation
+//---------------------------------
+
+$default-transition-settings:       0.3s ease;
+$modal-transition-settings:         0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+// Viewports
+//---------------------------------
+
+$vp--1281:                          1281px;
+// Retina
+//---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

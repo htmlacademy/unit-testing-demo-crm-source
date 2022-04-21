@@ -1,0 +1,78 @@
+.table table {
+  width: 100%;
+}
+
+.table thead {
+  pointer-events: none;
+}
+
+.table tr {
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: all $default-transition-settings;
+}
+
+.table tr:hover,
+.table tr:focus-within {
+  background-color: $color-white-smoke-3;
+}
+
+.table th {
+  font-size: 14px;
+  font-weight: 400;
+  color: $color-grey;
+  text-align: left;
+  padding: 15px;
+}
+
+.table td {
+  border: 1px solid $color-very-light-grey;
+  padding: 13px 15px 14px;
+}
+
+.table--project-history td {
+  padding: 14px 15px 15px;
+}
+
+.table--project-history .table__cell-attention {
+  padding: 8px 15px 9px;
+}
+
+.table__col-checkbox {
+  width: 1%;
+}
+
+.table__col-number {
+  width: 4.61%;
+}
+
+.table__col-large {
+  width: 30.51%;
+}
+
+.table__col-performer {
+  width: 15.38%;
+}
+
+.table__col-date {
+  width: 13.07%;
+}
+
+.table__col-medium {
+  width: 23.84%;
+}
+
+.table__row-checked {
+  background-color: $color-white-smoke;
+}
+
+
+.table__state-cell-inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.table__show-more {
+  margin: 25px auto 0;
+}

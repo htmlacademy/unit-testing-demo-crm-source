@@ -1,0 +1,46 @@
+.filter-form form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.filter-form--project-history form {
+  justify-content: flex-start;
+}
+
+.filter-form__input-date + .filter-form__input-date {
+  margin-left: 10px;
+}
+
+.filter-form__input-date {
+  margin-bottom: 10px;
+}
+
+.filter-form__selects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  min-width: 50%;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.filter-form__buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-width: 47%;
+  margin-left: 40px;
+  margin-right: -10px;
+}
+
+
+.filter-form__select {
+  margin: 10px 5px;
+}
+
+.filter-form__button {
+  margin: 0 10px 20px;
+}

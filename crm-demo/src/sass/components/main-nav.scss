@@ -1,0 +1,134 @@
+.main-nav {
+  background-color: $color-white-smoke;
+  padding: 40px 0;
+  min-width: 420px;
+  max-width: 420px;
+
+  @include vp--1280 {
+    min-width: 300px;
+    max-width: 330px;
+  }
+}
+
+.main-nav__button {
+  border: none;
+  background-color: transparent;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all $default-transition-settings;
+
+  &:hover {
+    color: $color-crusta;
+  }
+}
+
+
+.main-nav__button-collapse {
+  display: block;
+}
+
+.main-nav__button-open {
+  display: none;
+}
+
+
+.main-nav--collapsed {
+  min-width: 110px;
+  max-width: 110px;
+
+  @include vp--1280 {
+    min-width: 110px;
+    max-width: 110px;
+  }
+
+  .main-nav__button-collapse {
+    display: none;
+  }
+
+  .main-nav__button-open {
+    display: block;
+  }
+}
+
+.main-nav__figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 40px;
+}
+
+.main-nav__user-picture {
+  margin: 0 auto 30px;
+}
+
+.main-nav__user-picture img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+}
+
+.main-nav__user-name,
+.main-nav__user-role {
+  margin: 0;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.main-nav__user-name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.main-nav__user-role {
+  color: $color-grey;
+}
+
+.main-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav__list-item {
+  margin-bottom: 10px;
+}
+
+.main-nav__list-item--underlined {
+  padding-bottom: 30px;
+  border-bottom: 2px solid $color-white-smoke-2;
+  margin-bottom: 25px;
+}
+
+.main-nav--collapsed .main-nav__button {
+  margin-left: 30px;
+  margin-bottom: 60px;
+}
+
+.main-nav--collapsed .main-nav__figure {
+  margin-bottom: 120px;
+}
+
+.main-nav--collapsed figcaption {
+  display: none;
+}
+
+.main-nav--collapsed img {
+  width: 60px;
+  height: 60px;
+}
+
+.main-nav--collapsed .nav-link__title {
+  display: none;
+}
+
+.main-nav--collapsed .nav-link:not(.nav-link--active) {
+  padding-left: 40px;
+}
+
+
+.main-nav--collapsed .nav-link::before {
+  margin-right: 6px;
+}

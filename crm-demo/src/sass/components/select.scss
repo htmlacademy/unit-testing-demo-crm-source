@@ -1,0 +1,103 @@
+.select {
+  position: relative;
+  cursor: pointer;
+}
+
+.select--inline {
+  display: inline-grid;
+}
+
+.select__header {
+  display: grid;
+  grid-template-areas: "left-icon caption reset-button";
+  align-items: center;
+  background-color: $color-rose-white;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: all $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $color-crusta;
+  }
+}
+
+.select span {
+  grid-area: caption;
+  align-self: center;
+}
+
+.select svg:first-child:not(:only-child) {
+  grid-area: left-icon;
+  margin-right: 8px;
+}
+
+.select button {
+  display: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: all $default-transition-settings;
+}
+
+.select--selected button {
+  display: block;
+}
+
+.select--selected .select__header {
+  background-color: $color-crusta;
+  color: $color-default-white;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 10px 30px rgba(240, 136, 78, 0.15);
+  }
+}
+
+.select button:last-child:not(:only-child) {
+  grid-area: reset-button;
+  margin-left: 8px;
+}
+
+.select__list {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: $color-default-white;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: 8px 15px;
+    transition: all $default-transition-settings;
+  }
+
+  li:hover {
+    background-color: $color-white-smoke;
+  }
+}
+
+.select--opened .select__header {
+  background-color: $color-crusta;
+  color: $color-default-white;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 10px 30px rgba(240, 136, 78, 0.15);
+  }
+}
+
+.select--opened .select__list {
+  display: block;
+  z-index: 2;
+}

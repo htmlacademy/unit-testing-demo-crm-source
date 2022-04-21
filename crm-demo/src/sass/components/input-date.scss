@@ -1,0 +1,23 @@
+.input-date {
+  font-weight: 500;
+  display: grid;
+}
+
+.input-date input {
+  border: none;
+  color: inherit;
+  background-color: $color-rose-white;
+  padding: 10px 15px;
+  font-weight: inherit;
+  transition: all $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    background-color: $color-crusta;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 1px solid $color-default-black;
+  }
+}

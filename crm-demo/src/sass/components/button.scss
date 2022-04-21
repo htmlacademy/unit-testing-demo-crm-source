@@ -1,0 +1,85 @@
+.button {
+  display: grid;
+  grid-template-areas: "left-icon caption right-icon";
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 19px 20px;
+  transition: all $default-transition-settings;
+
+  &:focus {
+    outline: 1px solid $color-default-black;
+  }
+}
+
+.button span {
+  grid-area: caption;
+}
+
+.button__left-icon:not(:only-child) {
+  grid-area: left-icon;
+  margin-right: 10px;
+}
+
+.button__right-icon:not(:only-child) {
+  grid-area: right-icon;
+  margin-left: 10px;
+}
+
+.button--filled {
+  background-color: $color-crusta;
+  color: $color-default-white;
+  min-height: 60px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 10px 30px rgba(240, 136, 78, 0.15);
+  }
+}
+
+.button--transparent {
+  border: 1px solid $color-crusta;
+  color: $color-crusta;
+  min-height: 60px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-rose-white;
+  }
+}
+
+.button--lighter {
+  background-color: $color-rose-white;
+  color: $color-default-black;
+  min-height: 60px;
+
+  &:hover,
+  &:focus {
+    color: $color-crusta;
+  }
+}
+
+.button--large-icon {
+  padding: 18px;
+}
+
+.button--empty {
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button--accent-text {
+  color: $color-crusta;
+  padding: 15px;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
