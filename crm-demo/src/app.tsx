@@ -1,10 +1,10 @@
 import { Container } from './components/container/container';
-import { MainNav } from './components/main-nav/main-nav';
+import { Projects } from './pages/projects/projects';
 
 export function App() {
   return (
     <Container>
-      <MainNav />
+      <Projects />
     </Container>
   );
 }

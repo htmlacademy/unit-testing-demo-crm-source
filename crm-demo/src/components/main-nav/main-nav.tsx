@@ -17,6 +17,7 @@ import {ReactComponent as IconSettings} from '../../img/sprite/icon-settings.svg
 
 interface MainNavProps {
   collapsed: boolean;
+  selected: number;
 }
 
 const BUTTON_ICON_SIZE_30 = '30';
@@ -79,6 +80,7 @@ const currenUser: CurrentUserProps = {
 };
 
 export function MainNav(p: Partial<MainNavProps>) {
+  const {selected} = p;
   return (
     <div className={classnames('main-nav', { 'collapsed': !!p.collapsed })}>
       <Button
@@ -89,7 +91,7 @@ export function MainNav(p: Partial<MainNavProps>) {
         rightIcon={rightNavIcon}
       />
       <CurrentUser {...currenUser} />
-      <NavNav items={menu}></NavNav>
+      <NavNav items={menu} selected={selected}></NavNav>
     </div>
   );
 }

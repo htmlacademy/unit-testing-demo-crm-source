@@ -10,5 +10,6 @@ export interface NavNavItemProps {
 
 export interface NavNavProps {
   items: NavNavItemProps[];
+  selected: number;
 }
 
