@@ -33,7 +33,7 @@
 }
 
 .select button {
-  display: none;
+  visibility: hidden;
   border: none;
   width: 20px;
   height: 20px;
@@ -45,7 +45,7 @@
 }
 
 .select--selected button {
-  display: block;
+  visibility: inherit;
 }
 
 .select--selected .select__header {

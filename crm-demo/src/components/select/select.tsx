@@ -61,9 +61,15 @@ export function Select(p:Partial<SelectProps>) {
   return (
     <div className={classnames('select',className, {[`select--${modifier}`]:!!modifier})}>
       <div className='select__header' onClick={createOpenCloseHandler(setMod)}>
-        {mod==='opened'?leftIconOpened:leftIcon}
+        {mod==='opened' && leftIconOpened ? leftIconOpened:leftIcon}
         <span>{typeof value === 'string'? value: label}</span>
-        {resetIcon?<button type='button' onClick={()=>{setMod(undefined);setValue(undefined);}}>{resetIcon}</button>:null}
+        {resetIcon?
+          <button
+            type='button'
+            onClick={(evt)=>{evt.stopPropagation(); setMod(undefined);setValue(undefined);}}
+          >
+            {resetIcon}
+          </button>:null}
       </div>
       <div className='select__list' onClick={createClickHandler(setValue, setMod)}>
         <ul>
