@@ -1,5 +1,8 @@
+import { ComponentType } from 'react';
+
 export interface PagingProps{
   pageSize:number;
+  emptyMessage: ComponentType;
 }
 
 export function Paging(props:PagingProps){

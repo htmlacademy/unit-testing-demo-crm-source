@@ -1,13 +1,23 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { ComponentType } from 'react';
 import { Paging } from './paging';
 
 describe('Компонент управления разбиением на страницы',()=>{
   it('требует для работы размер страницы',()=>{
     const pageSize = 1;
-    render(<Paging pageSize={pageSize}/>);
+    const emptyMessage: ComponentType = ()=>null;
+    render(<Paging pageSize={pageSize}  emptyMessage={emptyMessage}/>);
   });
-  it('прекращает работу с ошибкой когда получает размер страницы не являющийся целым числом',()=>{
-    const pageSize = -1;
-    expect(()=>render(<Paging pageSize={pageSize}/>)).toThrow();
+  it.each([-1,0,1.5])('прекращает работу с ошибкой когда получает размер страницы (%d) не являющийся целым положительным числом',(pageSize)=>{
+    const emptyMessage: ComponentType = ()=>null;
+    expect(()=>render(<Paging pageSize={pageSize}  emptyMessage={emptyMessage}/>)).toThrow();
+  });
+  it('требует сведений для изображения сообщения в случае отсутствия данных',()=>{
+    const pageSize = 1;
+    const message = 'empty list';
+    const emptyMessage: ComponentType = ()=>(<div>{message}</div>);
+    render(<Paging pageSize={pageSize} emptyMessage={emptyMessage}/>);
+    const result = screen.getByText(message);
+    expect(result).not.toBeNull();
   });
 });
