@@ -1,9 +1,18 @@
 import { ComponentType } from 'react';
 
+export interface SelectCurrentPageProps {
+  pageSize: number;
+  totalItems: number;
+  requestedPage?: number | undefined;
+}
+
+export type CurrentPageSelector = (props: SelectCurrentPageProps) => number;
+
 export interface PagingProps<T> {
   pageSize: number;
   emptyMessage: ComponentType;
-  items?: T[] | undefined
+  items?: T[] | undefined;
+  selectCurrentPage: CurrentPageSelector;
 }
 
 const isEmpty = <T,>(items: T[] | undefined) => (!Array.isArray(items) || items.length <= 0);
