@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { ComponentType } from 'react';
-import { CurrentPageSelector, DataTable, DataTableProps, Paging } from './paging';
+import { Paging } from './paging';
+import { CurrentPageSelector, DataTable, DataTableProps } from './types';
 
 describe('Компонент управления разбиением на страницы', () => {
   it('требует для работы размер страницы', () => {
@@ -21,14 +22,14 @@ describe('Компонент управления разбиением на ст
     const emptyMessage: ComponentType = () => null;
     const selectCurrentPage = jest.fn() as CurrentPageSelector;
     const table = jest.fn() as DataTable<unknown>;
-    expect(() => render(
-      <Paging
-        pageSize={pageSize}
-        emptyMessage={emptyMessage}
-        selectCurrentPage={selectCurrentPage}
-        table={table}
-      />
-    )).toThrow();
+    expect(() =>
+      Paging({
+        pageSize:pageSize,
+        emptyMessage:emptyMessage,
+        selectCurrentPage:selectCurrentPage,
+        table:table
+      })
+    ).toThrow();
   });
   it('требует сведений для изображения сообщения в случае отсутствия данных', () => {
     const pageSize = 1;
